@@ -1,0 +1,12 @@
+.body {
+    display: flex;
+    flex-direction: column;
+}
+.breed-img
+{
+    max-height: 400px;
+    max-width: 400px;
+}
+.breed-select{
+    max-width: 400px;
+}
