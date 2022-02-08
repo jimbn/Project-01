@@ -97,6 +97,8 @@ function getGeoApify () {
                         itemName.textContent = data.features[i].properties.address_line1;
                         itemAddress.textContent = data.features[i].properties.address_line2;
                     }
+
+                document.getElementById(`itemsContainer`).className = `bg-info shadow card scroll`;   
                 })
         })
 }

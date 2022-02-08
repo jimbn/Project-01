@@ -25,15 +25,14 @@ color: #ff7547;
     padding-bottom: 10px;
 }
 
-.breed-img
-{
+.breed-img{
     max-height: auto;
     max-width: auto;
     border-radius: 5px;
     
 }
 
-.breed-select{
+.breed-select, #searchDist, #searchNumb{
     background-color: #ffffff;
     color: #ff7547;
     text-align: center;
@@ -45,6 +44,19 @@ color: #ff7547;
 .breed-weight, .breed-height, .temperament, .lifespan{
     padding-left: 10px;
     font-size: 1em;
+}
+
+#formPanel {
+    padding: 10px;
+}
+
+.scroll {
+    margin: 4px, 4px;
+    padding: 4px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
 }
 
 @media (min-width: 992px) {
