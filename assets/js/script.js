@@ -62,7 +62,7 @@ function selectSearchNumb () {
 
 // function to print list
 function getGeoApify () {
-    let locUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchedCity + apiKey;
+    let locUrl = "//api.openweathermap.org/geo/1.0/direct?q=" + searchedCity + apiKey;
     
     fetch(locUrl)
         .then(function(response){
@@ -71,7 +71,7 @@ function getGeoApify () {
         .then(function(data){
             const lat = data[0].lat;
             const lon = data[0].lon;
-            const geoApifyUrl = "https://api.geoapify.com/v2/places?categories=" + selectedParameter + "&filter=circle:" + lon + "," + lat + "," + radius + "&limit=" + limitNum  + "&apiKey=d44ff70a85d74358b285655b81aa219b";
+            const geoApifyUrl = "//api.geoapify.com/v2/places?categories=" + selectedParameter + "&filter=circle:" + lon + "," + lat + "," + radius + "&limit=" + limitNum  + "&apiKey=d44ff70a85d74358b285655b81aa219b";
             console.log(geoApifyUrl);
             fetch(geoApifyUrl)
                 .then(function(response){
