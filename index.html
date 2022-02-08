@@ -69,88 +69,82 @@ rel="stylesheet"
       <!-- search content-->
       <section>
         <div class="row">
-           <div class="col-md-3">
-                 <div class='card bg-info shadow'>
-        <img class='breed-img' id='breed-img' src="" alt="breed-img">
-        <select class='breed-select text-center font-weight-bold' id="breed-select"></select>
-        <div class="caption text-center font-weight-bold">Breed-Height</div>
-        <div class='breed-height text-center' id='breed-height' alt="breed-height"></div>
-        <div class="caption text-center font-weight-bold">Breed-Weight</div>
-        <div class='breed-weight text-center' id='breed-weight' alt="breed-weight"></div>        
-        <div class="caption text-center font-weight-bold">Life Expentancy</div>
-        <div class='lifespan text-center' id='lifespan' alt="lifespan"></div> 
-        <div class="caption text-center font-weight-bold">Temperament</div>
-        <div class='temperament text-center' id='temperament' alt="temperament"></div>          
-    </div>
-          </div>
-         
-        <div class="input-group mb-2 mt-5">
-            <input type="search" class="form-control rounded" placeholder="Search Your Breed" aria-label="Search" aria-describedby="search-addon" />
-            <button type="button" class="btn btn-primary">Search</button>
-          </div> 
-        <div class="input-group">
-        <div id="search">
-            <div id="formPanel">
-                <input type="text" name="searchedCity" id="searchedCity" value="City Name">
-                <div id="searchDistanceContainer">
-                    <label for="searchDist">Distance:</label>
-                    <select id="searchDist" name="searchDist">
-                        <option value="1609">1 mile</option>
-                        <option value="8047">5 miles</option>
-                        <option value="24140">15 miles</option>
-                        <option value="40233.6">25 miles</option>
-                    </select>
-                </div>
-                <div id="searchParameterContainer">
-                    <input type="checkbox" id="para1" name="para1" value="pet.shop">
-                    <label for="para1">Pet Store</label>
-                    <br>
-                    <input type="checkbox" id="para2" name="para2" value="pet.veterinary">
-                    <label for="para2">Veterinary Clinic</label>
-                    <br>
-                    <input type="checkbox" id="para3" name="para3" value="pet.service">
-                    <label for="para3">Pet Services</label>
-                    <br>
-                    <input type="checkbox" id="para4" name="para4" value="pet.dog_park">
-                    <label for="para4">Dog Park</label>
-                    <br>
-                </div>
-                <div id="searchNumbContainer">
-                    <label for="searchNumb">Number of Search Results:</label>
-                    <select id="searchNumb" name="searchNumb">
-                        <option value="5">5</option>
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                    </select>
-                </div>
-                <button id ="fetchButton" >Click for list</button>
+            <div class="col-md-3 flex-fill">
+              <div class='card bg-info shadow'>
+                <img class='breed-img' id='breed-img' src="" alt="breed-img">
+                <select class='breed-select text-center font-weight-bold' id="breed-select"></select>
+                <div class="caption text-center font-weight-bold">Breed-Height</div>
+                <div class='breed-height text-center' id='breed-height' alt="breed-height"></div>
+                <div class="caption text-center font-weight-bold">Breed-Weight</div>
+                <div class='breed-weight text-center' id='breed-weight' alt="breed-weight"></div>        
+                <div class="caption text-center font-weight-bold">Life Expentancy</div>
+                <div class='lifespan text-center' id='lifespan' alt="lifespan"></div> 
+                <div class="caption text-center font-weight-bold">Temperament</div>
+                <div class='temperament text-center' id='temperament' alt="temperament"></div>          
+              </div>
             </div>
-
-            <div id="itemsContainer">
-                <ul id="listItems">
-                </ul>
+            <div id="search" class="col-md-3 flex-fill">
+                <div id="formPanel" class="bg-info shadow card">
+                    <div id="searchDistanceContainer">
+                        <label for="searchDist">Distance:</label>
+                        <select id="searchDist" name="searchDist">
+                            <option value="1609">1 mile</option>
+                            <option value="8047">5 miles</option>
+                            <option value="24140">15 miles</option>
+                            <option value="40233.6">25 miles</option>
+                        </select>
+                    </div>
+                    <div class="" id="searchParameterContainer">
+                        <div class="">
+                            <input type="checkbox" id="para1" name="para1" value="pet.shop">
+                            <label for="para1">Pet Store</label>
+                        </div>
+                        <br>
+                        <div class="">
+                            <input type="checkbox" id="para2" name="para2" value="pet.veterinary">
+                            <label for="para2">Veterinary Clinic</label>
+                        </div>
+                        <br>
+                        <div class="">
+                            <input type="checkbox" id="para3" name="para3" value="pet.service">
+                            <label for="para3">Pet Services</label>
+                        </div>
+                        <br>
+                        <div class="">
+                            <input type="checkbox" id="para4" name="para4" value="pet.dog_park">
+                            <label for="para4">Dog Park</label>
+                        </div>
+                        <br>
+                    </div>
+                    <div id="searchNumbContainer">
+                        <label for="searchNumb">Number of Search Results:</label>
+                        <select id="searchNumb" name="searchNumb">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <input type="text" name="searchedCity" id="searchedCity" placeholder="City Name">
+                    <button id ="fetchButton" >Click for list</button>
+                </div>
+                <div id="itemsContainer">
+                    <ul id="listItems">
+                    </ul>
+                </div>
             </div>
-            
         </div>
 
 
     </div>
 
-          </div>
-            </div> 
-            <div class="col-md-6 mt-5 mx-5">
-            <h2>Google Map</h2>
-        </div>
-    </div>
-    </section>
-</main>
+  </main>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous">
-</script>
+    </script>
 
     <script src="assets/js/script.js"></script>
     <script src='assets/js/dogapi.js'></script>
