@@ -60,8 +60,6 @@ function selectSearchNumb () {
 }
 
 
-
-
 // function to print list
 function getGeoApify () {
     let locUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchedCity + apiKey;
@@ -103,5 +101,3 @@ function getGeoApify () {
         })
 }
 
-
-// fetchButton.addEventListener("click", getGeoApify);
