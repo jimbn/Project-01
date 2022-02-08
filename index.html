@@ -4,19 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Finding Dog Park</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Project 1</title>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+rel="stylesheet"
+/>
 </head>
 <body>
-    <header class = "hero"></header>
-    <form id="form-panel">
+   
+<head>
+    <!--Navbar page name -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <span class="navbar-brand m-3 h1 fs-1" id = "pageName">Project1</span>
+      <i class="fas fa-paw fs-1"></i>
+    </div>
+  </nav>
+</head>
+      
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+              <img src="assets/image/dog.jpg" class="img-fluid" width="600" height="600">    
+          </div>
+          <div class="col-md-6 gx-5 mb-4">
+            <h4 class = "fs-3"><strong>Why walking your dog is important?</strong></h4>
+            <p class="text-muted fs-4">
+                Walking your dog a couple times a week has several health and social benefits for dog owners. 
+                Improved cardiovascular fitness, lower blood pressure, 
+                stronger muscles and bones (as a result of frequent walking), 
+                and reduced stress are just a few of the advantages. 
+                A frequent walk is also beneficial to your pet's health.
+            </p>
+          </div>
+        </div>
+        <hr class="my-2">
+      </section>
+      <!-- search content-->
+      <section>
+        <div class="row">
+           <div class="col-md-3">
+         
+        <div class="input-group mb-2 mt-5">
+            <input type="search" class="form-control rounded" placeholder="Search Your Breed" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-primary">Search</button>
+          </div> 
+        <div class="input-group">
+            <input type="search" class="form-control rounded" placeholder="Zipcode" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-primary">Go</button>
+          </div>
+            </div> 
+            <div class="col-md-6 mt-5 mx-5">
+            <h2>Google Map</h2>
+        </div>
+    </div>
+    </section>
 
-    </form>
-    <div>
-        <div id="funFacts"></div>
-        <div id="map"></div>
     </div>
 
-    <script src="assets/js/script.js"></script>
-</body>
-</html>
+    
+    
+    
+
+    <!--Insert Map-->
+
+</main>
