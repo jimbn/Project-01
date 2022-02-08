@@ -1,3 +1,12 @@
+/* Height for devices larger than 576px */
+.navbar .nav-link {
+    color: #fff !important;
+  }
+#pageName {
+font-family: cursive;
+font-weight: bold;
+color: #ff7547;
+}
 
 .card{
     display: flex;
@@ -15,6 +24,7 @@
     text-indent:10px;
     padding-bottom: 10px;
 }
+
 .breed-img
 {
     max-height: auto;
@@ -22,6 +32,7 @@
     border-radius: 5px;
     
 }
+
 .breed-select{
     background-color: #ffffff;
     color: #ff7547;
@@ -30,7 +41,15 @@
     border: #ff7547;
     font-size: 1.25em;
 }
+
 .breed-weight, .breed-height, .temperament, .lifespan{
     padding-left: 10px;
     font-size: 1em;
 }
+
+@media (min-width: 992px) {
+    #intro {
+      margin-top: -58.59px;
+      height: 50vh !important;
+    }
+  }
