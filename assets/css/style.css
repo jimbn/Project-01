@@ -1,12 +1,36 @@
-.body {
+
+.card{
     display: flex;
+    flex-direction: grid;
+    width: 450px;
+    height:auto;
     flex-direction: column;
+    border-radius: 5px;
+    background-color: #ff7547;
+    border: 10px;
+    color: #ffffff;
+    box-shadow:5px 5px 5px  rgba(39, 17, 4, 0.6);
+    margin: 5px;
+    padding: none;
+    text-indent:10px;
+    padding-bottom: 10px;
 }
 .breed-img
 {
-    max-height: 400px;
-    max-width: 400px;
+    max-height: auto;
+    max-width: auto;
+    border-radius: 5px;
+    
 }
 .breed-select{
-    max-width: 400px;
+    background-color: #ffffff;
+    color: #ff7547;
+    text-align: center;
+    padding-left: 20px;
+    border: #ff7547;
+    font-size: 1.25em;
+}
+.breed-weight, .breed-height, .temperament, .lifespan{
+    padding-left: 10px;
+    font-size: 1em;
 }
