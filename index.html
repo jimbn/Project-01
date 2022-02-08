@@ -67,8 +67,53 @@ rel="stylesheet"
             <button type="button" class="btn btn-primary">Search</button>
           </div> 
         <div class="input-group">
-            <input type="search" class="form-control rounded" placeholder="Zipcode" aria-label="Search" aria-describedby="search-addon" />
-            <button type="button" class="btn btn-primary">Go</button>
+        <div id="search">
+            <div id="formPanel">
+                <input type="text" name="searchedCity" id="searchedCity" value="City Name">
+                <div id="searchDistanceContainer">
+                    <label for="searchDist">Distance:</label>
+                    <select id="searchDist" name="searchDist">
+                        <option value="1609">1 mile</option>
+                        <option value="8047">5 miles</option>
+                        <option value="24140">15 miles</option>
+                        <option value="40233.6">25 miles</option>
+                    </select>
+                </div>
+                <div id="searchParameterContainer">
+                    <input type="checkbox" id="para1" name="para1" value="pet.shop">
+                    <label for="para1">Pet Store</label>
+                    <br>
+                    <input type="checkbox" id="para2" name="para2" value="pet.veterinary">
+                    <label for="para2">Veterinary Clinic</label>
+                    <br>
+                    <input type="checkbox" id="para3" name="para3" value="pet.service">
+                    <label for="para3">Pet Services</label>
+                    <br>
+                    <input type="checkbox" id="para4" name="para4" value="pet.dog_park">
+                    <label for="para4">Dog Park</label>
+                    <br>
+                </div>
+                <div id="searchNumbContainer">
+                    <label for="searchNumb">Number of Search Results:</label>
+                    <select id="searchNumb" name="searchNumb">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                <button id ="fetchButton" >Click for list</button>
+            </div>
+
+            <div id="itemsContainer">
+                <ul id="listItems">
+                </ul>
+            </div>
+            
+        </div>
+
+    </div>
+
           </div>
             </div> 
             <div class="col-md-6 mt-5 mx-5">
@@ -76,13 +121,14 @@ rel="stylesheet"
         </div>
     </div>
     </section>
-
-    </div>
-
-    
-    
-    
-
-    <!--Insert Map-->
-
 </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
