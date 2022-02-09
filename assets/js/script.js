@@ -19,13 +19,12 @@ const apiKey = "&appid=5bbb7a356faba6df28c3a3229103f17a";
 // clearButton.addEventListener(`click`, rmvSearchList)
 
 fetchButton.addEventListener(`click`, function() {
-        rmvSearchList();
-        inputSearchedCity();
-        parameterChecked();
-        selectRadius();
-        selectSearchNumb();
-        getGeoApify ();
-    
+    rmvSearchList();
+    inputSearchedCity();
+    parameterChecked();
+    selectRadius();
+    selectSearchNumb();
+    getGeoApify ();
 });
 
 function rmvSearchList() {
