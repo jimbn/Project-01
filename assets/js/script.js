@@ -7,6 +7,8 @@ let searchItem;
 const fetchButton = document.getElementById(`fetchButton`);
 const clearButton = document.getElementById(`clear`);
 const closeModalBtn = document.getElementById(`closeModal`);
+const modal = document.querySelector(`.modal`);
+const overlay = document.querySelector(`#overlay`);
 
 let searchedCity;
 let limitNum;
@@ -49,7 +51,7 @@ function parameterChecked() {
     } 
     if( para2===true ){
         parameter.push(document.getElementById(`para2`).value);
-    } 
+    }
     if( para3===true ){
         parameter.push(document.getElementById(`para3`).value)
     } 
@@ -88,19 +90,17 @@ function getGeoApify () {
         })
         .then(function(data){
             
-            if(data === []) {
-                modal.style.display = "block";
-            }
-            else {  
+            if(data.length >= 1 ) {             
                 lat = data[0].lat;
                 lon = data[0].lon;         
                 let geoApifyUrl = "https://api.geoapify.com/v2/places?categories=" + selectedParameter + "&filter=circle:" + lon + "," + lat + "," + radius + "&limit=" + limitNum  + "&apiKey=d44ff70a85d74358b285655b81aa219b";
- ;
+                console.log(geoApifyUrl);
                 fetch(geoApifyUrl)
                     .then(function(response){
                         return response.json()
                     })
                     .then(function(data){
+                        console.log(data);
                         for(let i=0; i<data.features.length; i++){
 
                             let searchItem = document.createElement(`div`);
@@ -131,6 +131,9 @@ function getGeoApify () {
                     document.getElementById(`itemsContainer`).className = `bg-info  card shadow scroll`;   
                 })
             }
+            else {
+                modal.style.display="flex";
+            }
 
         })
 }
@@ -140,5 +143,6 @@ function getGeoApify () {
 // eventlistner to close modal
 closeModalBtn.addEventListener(`click`,function() {
     modal.style.display ="none";
+
 })
 
