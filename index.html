@@ -127,6 +127,7 @@ rel="stylesheet"
                     </div>
                     <input type="text" name="searchedCity" id="searchedCity" placeholder="City Name">
                     <button id ="fetchButton" >Click for list</button>
+                    <button id="clear">Clear Results</button>
                 </div>
                 <div id="itemsContainer">
                     <ul id="listItems">
@@ -137,8 +138,15 @@ rel="stylesheet"
 
 
     </div>
-
   </main>
+
+<!-- Modal  -->
+  <div id="errorModal" class="modal">
+    <div class="modalContent">
+      <p>Please enter a valid city.</p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
