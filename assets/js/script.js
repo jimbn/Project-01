@@ -16,7 +16,7 @@ let lat;
 let lon;
 const apiKey = "&appid=5bbb7a356faba6df28c3a3229103f17a";
 
-// clearButton.addEventListener(`click`, rmvSearchList)
+clearButton.addEventListener(`click`, rmvSearchList)
 
 fetchButton.addEventListener(`click`, function() {
     rmvSearchList();
@@ -28,6 +28,7 @@ fetchButton.addEventListener(`click`, function() {
 });
 
 function rmvSearchList() {
+    document.getElementById(`itemsContainer`).className = ``
     searchedList.innerHTML = '';
 }
 
@@ -102,10 +103,10 @@ function getGeoApify () {
                     .then(function(data){
                         for(let i=0; i<data.features.length; i++){
 
-                            let searchItem = document.createElement(`li`);
+                            let searchItem = document.createElement(`div`);
                             let itemName = document.createElement(`span`);
                             let itemDetails = document.createElement(`ul`);
-                            let itemAddress = document.createElement(`li`);
+                            let itemAddress = document.createElement(`div`);
                             
                             searchedList.append(searchItem);
                             searchItem.append(itemName);
@@ -113,11 +114,21 @@ function getGeoApify () {
                             itemDetails.append(itemAddress);
                             console.log(searchItem);
                             console.log(itemDetails);
+
                             itemName.textContent = data.features[i].properties.address_line1;
+                            // searchItem.className = "hover"
                             itemAddress.textContent = data.features[i].properties.address_line2;
+
+                            searchItem.addEventListener(`mouseover`, function() {
+                                searchItem.className="hover";
+                            })
+                            searchItem.addEventListener(`mouseout`, function() {
+                                searchItem.className="";
+                            })
                         }
 
-                    document.getElementById(`itemsContainer`).className = `bg-info shadow card scroll`;   
+                    
+                    document.getElementById(`itemsContainer`).className = `bg-info  card shadow scroll`;   
                 })
             }
 
@@ -130,3 +141,4 @@ function getGeoApify () {
 closeModalBtn.addEventListener(`click`,function() {
     modal.style.display ="none";
 })
+
