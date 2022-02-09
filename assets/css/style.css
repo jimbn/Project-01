@@ -50,6 +50,12 @@ color: #ff7547;
     padding: 10px;
 }
 
+#para {
+    font-style: italic;
+    text-justify: auto;
+    padding-top: 1rem;
+}
+
 .scroll {
     margin: 4px, 4px;
     padding: 4px;
