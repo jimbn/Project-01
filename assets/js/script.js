@@ -7,8 +7,10 @@ let searchItem;
 const fetchButton = document.getElementById(`fetchButton`);
 const clearButton = document.getElementById(`clear`);
 const closeModalBtn = document.getElementById(`closeModal`);
+const closeModal2Btn = document.getElementById(`closeModal2`);
+const modal2 = document.querySelector(`.modal2`);
 const modal = document.querySelector(`.modal`);
-const overlay = document.querySelector(`#overlay`);
+
 
 let searchedCity;
 let limitNum;
@@ -49,17 +51,21 @@ function parameterChecked() {
     if( para1===true ){
         parameter.push(document.getElementById(`para1`).value);
     } 
-    if( para2===true ){
+    else if( para2===true ){
         parameter.push(document.getElementById(`para2`).value);
     }
-    if( para3===true ){
-        parameter.push(document.getElementById(`para3`).value)
+    else if( para3===true ){
+        parameter.push(document.getElementById(`para3`).value);
     } 
-    if( para4===true ){
-        parameter.push(document.getElementById(`para4`).value)
+    else if( para4===true ){
+        parameter.push(document.getElementById(`para4`).value);
     } 
+    else {
+        alert(`Hellow World`);
+        modal2.style.display="flex";
+    }
 
-    selectedParameter = parameter.join("&");
+    selectedParameter = parameter
     parameter = []
     console.log(selectedParameter);
     console.log(parameter);
@@ -142,7 +148,8 @@ function getGeoApify () {
 
 // eventlistner to close modal
 closeModalBtn.addEventListener(`click`,function() {
-    modal.style.display ="none";
-
+    modal.style.display="none";
 })
-
+closeModal2Btn.addEventListener(`click`,function() {
+    modal2.style.display="none";
+})

@@ -67,7 +67,7 @@ color: #ff7547;
     z-index: 5;
 }
 
-.modal {
+.modal, .modal2 {
     display: none; /*default hide modal*/
     position: fixed;
     height: 100%;
