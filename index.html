@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <div>
     <!--Navbar page name -->
   <header class = "hero">
     <nav class="navbar navbar-light bg-light">
@@ -54,7 +55,7 @@
           </div>
           <div class="col-md-6 gx-5 mb-4">
             <h4 class = "fs-3"><strong>Why walking your dog is important?</strong></h4>
-            <p class="text-muted fs-4">
+            <p class="text-muted fs-4" id="para">
                 Walking your dog a couple times a week has several health and social benefits for dog owners. 
                 Improved cardiovascular fitness, lower blood pressure, 
                 stronger muscles and bones (as a result of frequent walking), 
@@ -95,22 +96,22 @@
                     </div>
                     <div class="" id="searchParameterContainer">
                         <div class="">
-                            <input type="checkbox" id="para1" name="para1" value="pet.shop">
+                            <input type="radio" id="para1" name="para" value="pet.shop">
                             <label for="para1">Pet Store</label>
                         </div>
                         <br>
                         <div class="">
-                            <input type="checkbox" id="para2" name="para2" value="pet.veterinary">
+                            <input type="radio" id="para2" name="para" value="pet.veterinary">
                             <label for="para2">Veterinary Clinic</label>
                         </div>
                         <br>
                         <div class="">
-                            <input type="checkbox" id="para3" name="para3" value="pet.service">
+                            <input type="radio" id="para3" name="para" value="pet.service">
                             <label for="para3">Pet Services</label>
                         </div>
                         <br>
                         <div class="">
-                            <input type="checkbox" id="para4" name="para4" value="pet.dog_park">
+                            <input type="radio" id="para4" name="para" value="pet.dog_park">
                             <label for="para4">Dog Park</label>
                         </div>
                         <br>
@@ -139,14 +140,22 @@
     </div>
   </main>
 
+</div>
 <!-- Modal  -->
-  <div id="errorModal" class="modal">
-    <div class="modalContent">
-      <p>Please enter a valid city.</p>
+
+  <div id="searchError" class="modal">
+    <div class="shadow mMessage">
+      <p>Unable to locate city and/or no locations of specified criteria has been found.</p>
+      <p>Please input a valid city and/or increase search distance.</p>
       <button id="closeModal">Close</button>
     </div>
   </div>
-
+  <div id="locError" class="modal2">
+    <div class="shadow mMessage">
+      <p>Please select a search criteria.</p>
+      <button id="closeModal2">Close</button>
+    </div>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
