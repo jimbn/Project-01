@@ -7,10 +7,9 @@ let searchItem;
 const fetchButton = document.getElementById(`fetchButton`);
 const clearButton = document.getElementById(`clear`);
 const closeModalBtn = document.getElementById(`closeModal`);
-const closeModal2Btn = document.getElementById(`closeModal2`);
-const modal2 = document.querySelector(`.modal2`);
-const modal = document.querySelector(`.modal`);
-
+const closeModalParaBtn = document.getElementById(`closeModalPara`);
+const searchError = document.getElementById(`searchError`);
+const locError = document.getElementById(`locError`);
 
 let searchedCity;
 let limitNum;
@@ -61,8 +60,8 @@ function parameterChecked() {
         parameter.push(document.getElementById(`para4`).value);
     } 
     else {
+        searchError.classList.add(`modal`);
         alert(`Hellow World`);
-        modal2.style.display="flex";
     }
 
     selectedParameter = parameter
@@ -138,7 +137,7 @@ function getGeoApify () {
                 })
             }
             else {
-                modal.style.display="flex";
+                locError.classList.add(`modal`);
             }
 
         })
@@ -148,8 +147,8 @@ function getGeoApify () {
 
 // eventlistner to close modal
 closeModalBtn.addEventListener(`click`,function() {
-    modal.style.display="none";
+    locError.classList.remove(`modal`);
 })
-closeModal2Btn.addEventListener(`click`,function() {
-    modal2.style.display="none";
+closeModalParaBtn.addEventListener(`click`,function() {
+    searchError.classList.remove(`modal`);
 })
