@@ -99,3 +99,63 @@ color: #ff7547;
       height: 50vh !important;
     }
   }
+
+  
+.container-fluid {
+    padding: 3rem;
+    background-color: ghostwhite;
+    color: orange;
+    border: 10px solid #2E2E2E;
+    text-align: center;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 6rem;
+  }
+  .col-md-8 {
+    position: relative;
+    background-color: ghostwhite;
+    color: orange;
+    width: 320px;
+    padding: 10px;
+    border: 10px solid #2E2E2E;
+    margin: 0;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 2rem;
+  }
+  .col-md-4 {
+    position: relative;
+    background-color: ghostwhite;
+    color: orange;
+    width: 320px;
+    padding: 10px;
+    border: 10px solid #2E2E2E;
+    margin: 0;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 2rem;
+  }
+  
+  .hero {
+    text-align: center;
+    font-family:  Brush Script MT, Brush Script Std, cursive;
+    font-size: 3rem;
+    color: orange;
+  }
+  .intro {
+    text-align: center;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 2rem;
+    color: orange;
+  }
+  .img {
+    width: 400px;
+    height: auto;
+  }
+  .facts {
+   text-align: center;
+   font-size: 1rem;
+   color: orange;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .map-pic {
+    width: 400px;
+    height: auto;
+  }
