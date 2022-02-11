@@ -37,7 +37,6 @@ function rmvSearchList() {
 
 function inputSearchedCity() {
     searchedCity = document.getElementById(`searchedCity`).value;
-    console.log(searchedCity);
 }
 
 function parameterChecked() {
@@ -61,13 +60,10 @@ function parameterChecked() {
     } 
     else {
         searchError.classList.add(`modal`);
-        alert(`Hellow World`);
     }
 
     selectedParameter = parameter
     parameter = []
-    console.log(selectedParameter);
-    console.log(parameter);
 }
 
 function selectRadius () {
@@ -85,8 +81,6 @@ function selectSearchNumb () {
 // function to print list
 function getGeoApify () {
     let locUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchedCity + apiKey;
-    console.log(locUrl);
-
 
     fetch(locUrl)
         .then(function(response){
@@ -99,7 +93,6 @@ function getGeoApify () {
                 lat = data[0].lat;
                 lon = data[0].lon;         
                 let geoApifyUrl = "https://api.geoapify.com/v2/places?categories=" + selectedParameter + "&filter=circle:" + lon + "," + lat + "," + radius + "&limit=" + limitNum  + "&apiKey=d44ff70a85d74358b285655b81aa219b";
-                console.log(geoApifyUrl);
                 fetch(geoApifyUrl)
                     .then(function(response){
                         return response.json()
@@ -131,8 +124,6 @@ function getGeoApify () {
                                 searchItem.className="";
                             })
                         }
-
-                    
                     document.getElementById(`itemsContainer`).className = `bg-info  card shadow scroll`;   
                 })
             }
