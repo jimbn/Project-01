@@ -10,7 +10,7 @@ const closeModalBtn = document.getElementById(`closeModal`);
 const closeModal2Btn = document.getElementById(`closeModal2`);
 const modal2 = document.querySelector(`.modal2`);
 const modal = document.querySelector(`.modal`);
-
+const fetchHist = document.getElementById('fetchHist');
 
 let searchedCity;
 let limitNum;
@@ -30,15 +30,21 @@ fetchButton.addEventListener(`click`, function() {
     selectSearchNumb();
     getGeoApify ();
 });
+// Saved Most Recent Searches
+fetchHist.addEventListener(`click`, function(){
+cities = localStorage.getItem('cities', searchedCity);
+document.getElementById(`searchedCity`).value = cities;
+});
 
 function rmvSearchList() {
-    document.getElementById(`itemsContainer`).className = ``
+    document.getElementById(`itemsContainer`).className = '';
     searchedList.innerHTML = '';
 }
 
 function inputSearchedCity() {
     searchedCity = document.getElementById(`searchedCity`).value;
     console.log(searchedCity);
+    localStorage.setItem('cities', searchedCity);
 }
 
 function parameterChecked() {
@@ -133,7 +139,6 @@ function getGeoApify () {
                             })
                         }
 
-                    
                     document.getElementById(`itemsContainer`).className = `bg-info  card shadow scroll`;   
                 })
             }
@@ -153,3 +158,4 @@ closeModalBtn.addEventListener(`click`,function() {
 closeModal2Btn.addEventListener(`click`,function() {
     modal2.style.display="none";
 })
+
