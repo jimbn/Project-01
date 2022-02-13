@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,200&display=swap');
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Height for devices larger than 576px */
 .navbar .nav-link {
     color: #fff !important;
@@ -73,8 +81,12 @@ color: #ff7547;
     z-index: 5;
 }
 
-.modal, .modal2 {
-    display: none; /*default hide modal*/
+.modalHide {
+  display: none;
+}
+
+.modal {
+    display: flex; /*default hide modal*/
     position: fixed;
     height: 100%;
     width: 100%;
@@ -84,6 +96,7 @@ color: #ff7547;
     background-color: rgba(121, 127, 129, 0.75);
     margin: 0px;
 }
+
 
 .mMessage {
     padding: 5px;
