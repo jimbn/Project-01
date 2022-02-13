@@ -34,7 +34,7 @@ let breeds;
 // changes text to card for breed height
         $('#breed-select').on('change', function() {
           let obj = breeds.find(({id}) => id == this.value);
-          $("#breed-height").text(obj.height.imperial).append(`"`);
+          $("#breed-height").text(obj.height.imperial).append(` inches`);
         });
 // changes text to card for breed weight
         $('#breed-select').on('change', function() {
