@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,200&display=swap');
-
 * {
-  box-sizing: border-box;
-  max-width: 100%;
-  font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Height for devices larger than 576px */
 .navbar .nav-link {
     color: #fff !important;
-  }
+}
+
 #pageName {
-font-family: cursive;
-font-weight: bold;
-color: #ff7547;
+    font-family: cursive;
+    font-weight: bold;
+    color: #ff7547;
 }
 
 .card{
@@ -58,12 +57,6 @@ color: #ff7547;
     padding: 10px;
 }
 
-#para {
-    font-style: italic;
-    text-justify: auto;
-    padding-top: 1rem;
-}
-
 .scroll {
     margin: 4px, 4px;
     padding: 4px;
@@ -86,7 +79,7 @@ color: #ff7547;
 }
 
 .modal {
-    display: flex; /*default hide modal*/
+    display: flex; 
     position: fixed;
     height: 100%;
     width: 100%;
@@ -96,7 +89,6 @@ color: #ff7547;
     background-color: rgba(121, 127, 129, 0.75);
     margin: 0px;
 }
-
 
 .mMessage {
     padding: 5px;
@@ -111,10 +103,17 @@ color: #ff7547;
       margin-top: -58.59px;
       height: 50vh !important;
     }
-  }
+}
 
-  
-.container-fluid {
+@media (min-width: 992px) {
+    #intro {
+      margin-top: -58.59px;
+      height: 50vh !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,200&display=swap')
+
+ /*.container-fluid {
     padding: 3rem;
     background-color: ghostwhite;
     color: orange;
@@ -171,7 +170,8 @@ color: #ff7547;
   .map-pic {
     width: 400px;
     height: auto;
-  }
+  }  */
+
   /* ---- footer ----*/
   #footer {
   background-color: rgba(0, 0, 0, 0.2);
@@ -182,5 +182,4 @@ color: #ff7547;
   .text-dark {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  
 
