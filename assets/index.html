@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Human's Best Friend</title>
+    
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+  />
+  <!-- Google Fonts -->
+  <link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+  />
+  <!-- MDB -->
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+  rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body >
+    <!--Navbar page name -->
+  <header class = "hero" id="home">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <span class="navbar-brand m-3 h1 fs-1" id = "pageName">Human's Best Friend</span>
+        <i class="logo fas fa-paw fs-1"></i>
+      </div>
+      <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#dogs">Breeds</a>
+        <a href="#search">Search</a>
+      </div>
+    </nav>
+  </header>
+
+  <!--Main layout-->
+  <main class="main mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6 col-sm-12 mb-5">
+              <img src="assets/image/dog.jpg" class="introPic img-fluid">    
+          </div>
+          <div class="col-md-4 ml-4">
+            <h4 class = "fs-3"><strong>Why walking your dog is important?</strong></h4>
+            <p class="text-muted fs-4" id="para">
+                Walking your dog a couple times a week has several health and social benefits for dog owners. 
+                Improved cardiovascular fitness, lower blood pressure, 
+                stronger muscles and bones (as a result of frequent walking), 
+                and reduced stress are just a few of the advantages. 
+                A frequent walk is also beneficial to your pet's health.
+            </p>
+          </div>
+        </div>
+        <hr class="my-2">
+      </section>
+      <!-- search content-->
+      <section>
+      <br>
+      <div class="row d-flex justify-content-center" id="dogs">
+          <p class="card h4 text-center col-md-6" id="para">
+            Curious about a breed? Check out our database on your favorite doggo.
+        </p>
+      </div>
+      <div class=" row d-flex justify-content-center">
+            <div class='card bg-info col-md-12 px-0 py-0 '>
+              <img class='breed-img' id='breed-img' src="" alt="breed-img">
+              <select class='breed-select text-center font-weight-bold' id="breed-select"></select>
+              <div class="caption text-center font-weight-bold">Breed-Height
+              </div>
+              <div class='breed-height text-center' id='breed-height' alt="breed-height">
+              </div>
+              <div class="caption text-center font-weight-bold">Breed-Weight
+              </div>
+              <div class='breed-weight text-center' id='breed-weight' alt="breed-weight">
+              </div>        
+              <div class="caption text-center font-weight-bold">Life Expentancy
+              </div>
+              <div class='lifespan text-center' id='lifespan' alt="lifespan">
+              </div> 
+              <div class="caption text-center font-weight-bold">Temperament
+              </div>
+              <div class='temperament text-center' id='temperament' alt="temperament">
+              </div>          
+            </div>
+      </div>
+      <br>
+      <div class="row d-flex justify-content-center" id="search">
+        <p class="card h4 text-center col-md-6" id="para">
+          Search
+      </p>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div id="formPanel" class="bg-info card ">
+          <div id="searchDistanceContainer">
+              <label for="searchDist">Distance:</label>
+              <select class="text-center" id="searchDist" name="searchDist">
+                  <option value="1609">1 mile</option>
+                  <option value="8047">5 miles</option>
+                  <option value="24140">15 miles</option>
+                  <option value="40233.6">25 miles</option>
+              </select>
+          </div>
+          <div class="" id="searchParameterContainer">
+            <div class="">
+                <input type="radio" id="para1" name="para" value="pet.shop">
+                <label for="para1">Pet Store</label>
+            </div>
+            <div class="">
+                <input type="radio" id="para2" name="para" value="pet.veterinary">
+                <label for="para2">Veterinary Clinic</label>
+            </div>
+            <div class="">
+                <input type="radio" id="para3" name="para" value="pet.service">
+                <label for="para3">Pet Services</label>
+            </div>
+            <div class="">
+                <input type="radio" id="para4" name="para" value="pet.dog_park">
+                <label for="para4">Dog Park</label>
+            </div>
+          </div>
+          <div id="searchNumbContainer text-center">
+            <label for="searchNumb">Number of Search Results:</label>
+            <select id="searchNumb" name="searchNumb">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+          <input type="text" name="searchedCity" id="searchedCity" placeholder="City Name">
+          <button id ="fetchButton" >Click for list</button>
+          <button id="clear">Clear Results</button>
+        </div>
+        <div id="itemsContainer text-center">
+          <div id="listItems">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+  </main>
+<!-- Modal  -->
+
+  <div id="locError" class="modalHide">
+    <div class="shadow mMessage">
+      <p>Unable to locate city and/or no locations of specified criteria has been found.</p>
+      <p>Please input a valid city and/or increase search distance.</p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+  <div id="searchError" class="modalHide">
+    <div class="shadow mMessage">
+      <p>Please select a search criteria.</p>
+      <button id="closeModalPara">Close</button>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+    </script>
+
+    <script src="assets/js/script.js"></script>
+    <script src='assets/js/dogapi.js'></script>
+</body>
+</html>
