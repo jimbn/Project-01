@@ -172,3 +172,15 @@ color: #ff7547;
     width: 400px;
     height: auto;
   }
+  /* ---- footer ----*/
+  #footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  }
+  .text-dark:hover{
+    background-color: orange;
+  }
+  .text-dark {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+
