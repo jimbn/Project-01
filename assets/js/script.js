@@ -1,55 +1,24 @@
-
-//  if search multiple parameter, must have & between each
-
 const searchedList = document.getElementById(`listItems`);
 const fetchButton = document.getElementById(`fetchButton`);
-const clearButton = document.getElementById(`clear`);
-const closeModalBtn = document.getElementById(`closeModal`);
-let itemName;
-let searchItem;
 const fetchHist = document.getElementById('fetchHist');
-
-const closeModalParaBtn = document.getElementById(`closeModalPara`);
+const clearButton = document.getElementById(`clear`);
 const searchError = document.getElementById(`searchError`);
 const locError = document.getElementById(`locError`);
-
+const closeModalBtn = document.getElementById(`closeModal`);
+const closeModalParaBtn = document.getElementById(`closeModalPara`);
 
 let searchedCity;
+let lat;
+let lon;
 let limitNum;
 let radius;
 let selectedParameter;
-let lat;
-let lon;
-
-clearButton.addEventListener(`click`, rmvSearchList)
-
-fetchButton.addEventListener(`click`, function() {
-    rmvSearchList();
-    // inputSearchedCity();
-    parameterChecked();
-    // selectRadius();
-    // selectSearchNumb();
-    getGeoApify ();
-});
-// Saved Most Recent Searches
-fetchHist.addEventListener(`click`, function(){
-cities = localStorage.getItem('cities', searchedCity);
-document.getElementById(`searchedCity`).value = cities;
-});
+let itemName;
+let searchItem;
 
 function rmvSearchList() {
     document.getElementById(`itemsContainer`).className = '';
     searchedList.innerHTML = '';
-}
-
-// function inputSearchedCity() {
-//     searchedCity = document.getElementById(`searchedCity`).value;
-//     console.log(searchedCity);
-// }
-function inputSearchedCity() {
-    searchedCity = document.getElementById(`searchedCity`).value;
-    console.log(searchedCity);
-    localStorage.setItem('cities', searchedCity);
 }
 
 function parameterChecked() {
@@ -73,37 +42,27 @@ function parameterChecked() {
     else {
         searchError.classList.add(`modal`);
     }
-
 }
 
-// function selectRadius () {
-//     radius = document.getElementById(`searchDist`).value;
-// }
-
-// function selectSearchNumb () {
-//     limitNum = document.getElementById(`searchNumb`).value;
-// }
-
-
-
-// function to print list
+// Function to fetch and return API
 function getGeoApify () {
     searchedCity = document.getElementById(`searchedCity`).value;
     radius = document.getElementById(`searchDist`).value;
     limitNum = document.getElementById(`searchNumb`).value;
+    localStorage.setItem('cities', searchedCity);
     let locUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchedCity + "&appid=5bbb7a356faba6df28c3a3229103f17a";
 
+    // Fetch openweather API for longitude and latitude
     fetch(locUrl)
         .then(function(response){
             return response.json();
-
         })
         .then(function(data){          
             if(data.length >= 1 ) {             
                 lat = data[0].lat;
                 lon = data[0].lon;         
                 let geoApifyUrl = "https://api.geoapify.com/v2/places?categories=" + selectedParameter + "&filter=circle:" + lon + "," + lat + "," + radius + "&limit=" + limitNum  + "&apiKey=d44ff70a85d74358b285655b81aa219b";
-                console.log(geoApifyUrl);
+                // Fetch and return geoapify API for different location
                 fetch(geoApifyUrl)
                     .then(function(response){
                         return response.json()
@@ -118,19 +77,17 @@ function getGeoApify () {
                             let itemAddress = document.createElement(`div`);
                             
                             searchedList.append(searchItem);
-                            searchItem.append(itemName);
-                            searchItem.append(itemDetails);
+                            searchItem.append(itemName, itemDetails);
                             itemDetails.append(itemAddress);
-                            console.log(searchItem);
-                            console.log(itemDetails);
-
+                            
+                            // Print selected data from the API into the page
                             itemName.textContent = data.features[i].properties.address_line1;
-                            // searchItem.className = "hover"
                             itemAddress.textContent = data.features[i].properties.address_line2;
-
+                            // Add hover class when user's mouse move over individual item that was printed.
                             searchItem.addEventListener(`mouseover`, function() {
                                 searchItem.className="hover";
                             })
+                            // Remove hover class when user's mouse move off the item
                             searchItem.addEventListener(`mouseout`, function() {
                                 searchItem.className="";
                             })
@@ -146,13 +103,26 @@ function getGeoApify () {
         })
 }
 
+// Fetch and print slected returned API data onto the page
+fetchButton.addEventListener(`click`, function() {
+    rmvSearchList();
+    parameterChecked();
+    getGeoApify ();
+});
 
+// Remove list of searched locations
+clearButton.addEventListener(`click`, rmvSearchList);
+
+// Saved Most Recent Searches
+fetchHist.addEventListener(`click`, function(){
+    document.getElementById(`searchedCity`).value = localStorage.getItem('cities', searchedCity);
+});
 
 // eventlistner to close modal
 closeModalBtn.addEventListener(`click`,function() {
     locError.classList.remove(`modal`);
-})
+});
 closeModalParaBtn.addEventListener(`click`,function() {
     searchError.classList.remove(`modal`);
-})
+});
 
