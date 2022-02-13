@@ -2,28 +2,26 @@
 //  if search multiple parameter, must have & between each
 
 const searchedList = document.getElementById(`listItems`);
-let itemName;
-let searchItem;
 const fetchButton = document.getElementById(`fetchButton`);
 const clearButton = document.getElementById(`clear`);
 const closeModalBtn = document.getElementById(`closeModal`);
-
+let itemName;
+let searchItem;
 let searchedCity;
 let limitNum;
 let radius;
 let selectedParameter;
 let lat;
 let lon;
-const apiKey = "&appid=5bbb7a356faba6df28c3a3229103f17a";
 
 clearButton.addEventListener(`click`, rmvSearchList)
 
 fetchButton.addEventListener(`click`, function() {
     rmvSearchList();
-    inputSearchedCity();
+    // inputSearchedCity();
     parameterChecked();
-    selectRadius();
-    selectSearchNumb();
+    // selectRadius();
+    // selectSearchNumb();
     getGeoApify ();
 });
 
@@ -32,54 +30,47 @@ function rmvSearchList() {
     searchedList.innerHTML = '';
 }
 
-function inputSearchedCity() {
-    searchedCity = document.getElementById(`searchedCity`).value;
-    console.log(searchedCity);
-}
+// function inputSearchedCity() {
+//     searchedCity = document.getElementById(`searchedCity`).value;
+//     console.log(searchedCity);
+// }
 
 function parameterChecked() {
     let para1 = document.getElementById(`para1`).checked;
     let para2 = document.getElementById(`para2`).checked;
     let para3 = document.getElementById(`para3`).checked;
     let para4 = document.getElementById(`para4`).checked;
-    let parameter = [];
 
     if( para1===true ){
-        parameter.push(document.getElementById(`para1`).value);
+        selectedParameter = document.getElementById(`para1`).value;
     } 
     if( para2===true ){
-        parameter.push(document.getElementById(`para2`).value);
+        selectedParameter = document.getElementById(`para2`).value;
     } 
     if( para3===true ){
-        parameter.push(document.getElementById(`para3`).value)
+        selectedParameter = document.getElementById(`para3`).value;
     } 
     if( para4===true ){
-        parameter.push(document.getElementById(`para4`).value)
+        selectedParameter =(document.getElementById(`para4`).value;
     } 
-
-    selectedParameter = parameter.join("&");
-    parameter = []
-    console.log(selectedParameter);
-    console.log(parameter);
 }
 
-function selectRadius () {
-    radius = document.getElementById(`searchDist`).value;
+// function selectRadius () {
+//     radius = document.getElementById(`searchDist`).value;
+// }
 
-}
-
-function selectSearchNumb () {
-    limitNum = document.getElementById(`searchNumb`).value;
-
-}
+// function selectSearchNumb () {
+//     limitNum = document.getElementById(`searchNumb`).value;
+// }
 
 
 
 // function to print list
 function getGeoApify () {
-    let locUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchedCity + apiKey;
-    console.log(locUrl);
-
+    searchedCity = document.getElementById(`searchedCity`).value;
+    radius = document.getElementById(`searchDist`).value;
+    limitNum = document.getElementById(`searchNumb`).value;
+    let locUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchedCity + "&appid=5bbb7a356faba6df28c3a3229103f17a";
 
     fetch(locUrl)
         .then(function(response){
@@ -87,7 +78,6 @@ function getGeoApify () {
 
         })
         .then(function(data){
-            
             if(data === []) {
                 modal.style.display = "block";
             }

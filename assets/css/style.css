@@ -3,9 +3,9 @@
     color: #fff !important;
   }
 #pageName {
-font-family: cursive;
-font-weight: bold;
-color: #ff7547;
+    font-family: cursive;
+    font-weight: bold;
+    color: #ff7547;
 }
 
 .card{
@@ -66,10 +66,6 @@ color: #ff7547;
     overflow-x: auto;
     z-index: 5;
 }
-
-/* .wrap-text:hover {
-    overflow-x:visible;
-} */
 
 .modal {
     display: none; /*default hide modal*/
