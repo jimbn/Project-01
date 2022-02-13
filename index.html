@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <title>Finding Dog Park</title>
+    <title>Human's bstfriend</title>
     
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -33,11 +33,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <div>
     <!--Navbar page name -->
   <header class = "hero">
     <nav class="navbar navbar-light bg-light">
       <div class="container">
-        <span class="navbar-brand m-3 h1 fs-1" id = "pageName">Project1</span>
+        <span class="navbar-brand m-3 h1 fs-1" id = "pageName">Human's bstfriend</span>
         <i class="fas fa-paw fs-1"></i>
       </div>
     </nav>
@@ -54,7 +55,7 @@
           </div>
           <div class="col-md-6 gx-5 mb-4">
             <h4 class = "fs-3"><strong>Why walking your dog is important?</strong></h4>
-            <p class="text-muted fs-4">
+            <p class="text-muted fs-4" id="para">
                 Walking your dog a couple times a week has several health and social benefits for dog owners. 
                 Improved cardiovascular fitness, lower blood pressure, 
                 stronger muscles and bones (as a result of frequent walking), 
@@ -63,7 +64,7 @@
             </p>
           </div>
         </div>
-        <hr class="my-2">
+        <hr>
       </section>
       <!-- search content-->
       <section>
@@ -79,7 +80,7 @@
                 <div class="caption text-center font-weight-bold">Life Expentancy</div>
                 <div class='lifespan text-center' id='lifespan' alt="lifespan"></div> 
                 <div class="caption text-center font-weight-bold">Temperament</div>
-                <div class='temperament text-center' id='temperament' alt="temperament"></div>          
+                <div class='temperament text-center' id='temperament' alt="temperament"></div>         
               </div>
             </div>
             <div id="search" class="col-md-3 flex-fill">
@@ -95,22 +96,22 @@
                     </div>
                     <div class="" id="searchParameterContainer">
                         <div class="">
-                            <input type="checkbox" id="pet.shop" name="pet.shop" value="pet.shop">
+                            <input type="radio" id="para1" name="para" value="pet.shop">
                             <label for="para1">Pet Store</label>
                         </div>
                         <br>
                         <div class="">
-                            <input type="checkbox" id="pet.veterinary" name="pet.veterinary" value="pet.veterinary">
+                            <input type="radio" id="para2" name="para" value="pet.veterinary">
                             <label for="para2">Veterinary Clinic</label>
                         </div>
                         <br>
                         <div class="">
-                            <input type="checkbox" id="pet.service" name="pet.service" value="pet.service">
-                            <label for="pet.service">Pet Services</label>
+                            <input type="radio" id="para3" name="para" value="pet.service">
+                            <label for="para3">Pet Services</label>
                         </div>
                         <br>
                         <div class="">
-                            <input type="checkbox" id="pet.dog_park" name="pet.dog_park" value="pet.dog_park">
+                            <input type="radio" id="para4" name="para" value="pet.dog_park">
                             <label for="para4">Dog Park</label>
                         </div>
                         <br>
@@ -127,6 +128,7 @@
                     <input type="text" name="searchedCity" id="searchedCity" placeholder="City Name">
                     <button id ="fetchButton" >Click for list</button>
                     <button id="clear">Clear Results</button>
+                    <button id="fetchHist">Recent Searches</button>
                 </div>
                 <div id="itemsContainer">
                     <div id="listItems">
@@ -139,14 +141,22 @@
     </div>
   </main>
 
+</div>
 <!-- Modal  -->
-  <div id="errorModal" class="modal">
-    <div class="modalContent">
-      <p>Please enter a valid city.</p>
+
+  <div id="locError" class="modalHide">
+    <div class="shadow mMessage">
+      <p>Unable to locate city and/or no locations of specified criteria has been found.</p>
+      <p>Please input a valid city and/or increase search distance.</p>
       <button id="closeModal">Close</button>
     </div>
   </div>
-
+  <div id="searchError" class="modalHide">
+    <div class="shadow mMessage">
+      <p>Please select a search criteria.</p>
+      <button id="closeModalPara">Close</button>
+    </div>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -157,3 +167,21 @@
     <script src='assets/js/dogapi.js'></script>
 </body>
 </html>
+
+<!--  <div class="container-fluid">
+       Man's Best Friend
+       <img class="img" src="https://www.rover.com/blog/wp-content/uploads/2016/08/dogs-playing-catch.jpg">
+       <header class = "hero">Welcome To Our App</header>
+       <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <form id="form-panel">
+    </form>
+    </div>
+    <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4"></div>
+        <div class="facts" style="width: 10rem"></div>
+    </div>
+-->

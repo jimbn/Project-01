@@ -80,4 +80,177 @@
       margin-top: -58.59px;
       height: 50vh !important;
     }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,200&display=swap');
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Height for devices larger than 576px */
+.navbar .nav-link {
+    color: #fff !important;
+  }
+#pageName {
+font-family: cursive;
+font-weight: bold;
+color: #ff7547;
+}
+
+.card{
+    display: flex;
+    flex-direction: grid;
+    width: 450px;
+    height:auto;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #ff7547;
+    border: 10px;
+    color: #ffffff;
+    box-shadow:5px 5px 5px  rgba(39, 17, 4, 0.6);
+    margin: 5px;
+    padding: none;
+    text-indent:10px;
+    padding-bottom: 10px;
+}
+
+.breed-img{
+    max-height: auto;
+    max-width: auto;
+    border-radius: 5px;
+    
+}
+
+.breed-select, #searchDist, #searchNumb{
+    background-color: #ffffff;
+    color: #ff7547;
+    text-align: center;
+    padding-left: 20px;
+    border: #ff7547;
+    font-size: 1.25em;
+}
+
+.breed-weight, .breed-height, .temperament, .lifespan{
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+#formPanel {
+    padding: 10px;
+}
+
+#para {
+    font-style: italic;
+    text-justify: auto;
+    padding-top: 1rem;
+}
+
+.scroll {
+    margin: 4px, 4px;
+    padding: 4px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.hover {
+    background-color: rgb(39, 162, 202);
+    box-shadow:5px 5px 5px  rgba(39, 17, 4, 0.6);
+    border-radius: 5px;
+    overflow-x: auto;
+    z-index: 5;
+}
+
+.modalHide {
+  display: none;
+}
+
+.modal {
+    display: flex; /*default hide modal*/
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index:990;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(121, 127, 129, 0.75);
+    margin: 0px;
+}
+
+
+.mMessage {
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(39, 162, 202, 0.9);
+    border-radius: 5px;
+}
+
+@media (min-width: 992px) {
+    #intro {
+      margin-top: -58.59px;
+      height: 50vh !important;
+    }
+  }
+
+  
+/*.container-fluid {
+    padding: 3rem;
+    background-color: ghostwhite;
+    color: orange;
+    border: 10px solid #2E2E2E;
+    text-align: center;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 6rem;
+  }
+  .col-md-8 {
+    position: relative;
+    background-color: ghostwhite;
+    color: orange;
+    width: 320px;
+    padding: 10px;
+    border: 10px solid #2E2E2E;
+    margin: 0;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 2rem;
+  }
+  .col-md-4 {
+    position: relative;
+    background-color: ghostwhite;
+    color: orange;
+    width: 320px;
+    padding: 10px;
+    border: 10px solid #2E2E2E;
+    margin: 0;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 2rem;
+  }
+  
+  .hero {
+    text-align: center;
+    font-family:  Brush Script MT, Brush Script Std, cursive;
+    font-size: 3rem;
+    color: orange;
+  }
+  .intro {
+    text-align: center;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 2rem;
+    color: orange;
+  }
+  .img {
+    width: 400px;
+    height: auto;
+  }
+  .facts {
+   text-align: center;
+   font-size: 1rem;
+   color: orange;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .map-pic {
+    width: 400px;
+    height: auto;
   }

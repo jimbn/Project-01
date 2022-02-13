@@ -7,6 +7,13 @@ const clearButton = document.getElementById(`clear`);
 const closeModalBtn = document.getElementById(`closeModal`);
 let itemName;
 let searchItem;
+const fetchHist = document.getElementById('fetchHist');
+
+const closeModalParaBtn = document.getElementById(`closeModalPara`);
+const searchError = document.getElementById(`searchError`);
+const locError = document.getElementById(`locError`);
+
+
 let searchedCity;
 let limitNum;
 let radius;
@@ -24,9 +31,14 @@ fetchButton.addEventListener(`click`, function() {
     // selectSearchNumb();
     getGeoApify ();
 });
+// Saved Most Recent Searches
+fetchHist.addEventListener(`click`, function(){
+cities = localStorage.getItem('cities', searchedCity);
+document.getElementById(`searchedCity`).value = cities;
+});
 
 function rmvSearchList() {
-    document.getElementById(`itemsContainer`).className = ``
+    document.getElementById(`itemsContainer`).className = '';
     searchedList.innerHTML = '';
 }
 
@@ -34,6 +46,11 @@ function rmvSearchList() {
 //     searchedCity = document.getElementById(`searchedCity`).value;
 //     console.log(searchedCity);
 // }
+function inputSearchedCity() {
+    searchedCity = document.getElementById(`searchedCity`).value;
+    console.log(searchedCity);
+    localStorage.setItem('cities', searchedCity);
+}
 
 function parameterChecked() {
     let para1 = document.getElementById(`para1`).checked;
@@ -44,15 +61,19 @@ function parameterChecked() {
     if( para1===true ){
         selectedParameter = document.getElementById(`para1`).value;
     } 
-    if( para2===true ){
+    else if( para2===true ){
         selectedParameter = document.getElementById(`para2`).value;
     } 
-    if( para3===true ){
+    else if( para3===true ){
         selectedParameter = document.getElementById(`para3`).value;
     } 
-    if( para4===true ){
-        selectedParameter =(document.getElementById(`para4`).value;
+    else if( para4===true ){
+        selectedParameter = document.getElementById(`para4`).value;
     } 
+    else {
+        searchError.classList.add(`modal`);
+    }
+
 }
 
 // function selectRadius () {
@@ -77,20 +98,18 @@ function getGeoApify () {
             return response.json();
 
         })
-        .then(function(data){
-            if(data === []) {
-                modal.style.display = "block";
-            }
-            else {  
+        .then(function(data){          
+            if(data.length >= 1 ) {             
                 lat = data[0].lat;
                 lon = data[0].lon;         
                 let geoApifyUrl = "https://api.geoapify.com/v2/places?categories=" + selectedParameter + "&filter=circle:" + lon + "," + lat + "," + radius + "&limit=" + limitNum  + "&apiKey=d44ff70a85d74358b285655b81aa219b";
- ;
+                console.log(geoApifyUrl);
                 fetch(geoApifyUrl)
                     .then(function(response){
                         return response.json()
                     })
                     .then(function(data){
+                        console.log(data);
                         for(let i=0; i<data.features.length; i++){
 
                             let searchItem = document.createElement(`div`);
@@ -117,9 +136,11 @@ function getGeoApify () {
                             })
                         }
 
-                    
                     document.getElementById(`itemsContainer`).className = `bg-info  card shadow scroll`;   
                 })
+            }
+            else {
+                locError.classList.add(`modal`);
             }
 
         })
@@ -129,6 +150,9 @@ function getGeoApify () {
 
 // eventlistner to close modal
 closeModalBtn.addEventListener(`click`,function() {
-    modal.style.display ="none";
+    locError.classList.remove(`modal`);
+})
+closeModalParaBtn.addEventListener(`click`,function() {
+    searchError.classList.remove(`modal`);
 })
 
