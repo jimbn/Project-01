@@ -91,7 +91,7 @@ function getGeoApify () {
                                 searchItem.className="";
                             })
                         }
-                    document.getElementById(`itemsContainer`).className = `bg-info  card shadow scroll`;   
+                    document.getElementById(`itemsContainer`).className = `card shadow`;   
                 })
             }
             else {

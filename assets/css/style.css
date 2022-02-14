@@ -4,6 +4,8 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+
+
 .navbar .nav-link {
   color: rgb(0, 0, 0) !important;
 }
@@ -94,20 +96,15 @@
   padding-top: 1rem;
 }
   
-.scroll {
-  margin: 4px, 4px;
-  padding: 4px;
-  height: 400px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  white-space: nowrap;
+#itemsContainer {
+    text-align: center;
+
 }
   
 .hover {
   background-color: #ff7547;
   box-shadow:5px 5px 5px  rgba(39, 17, 4, 0.6);
   border-radius: 5px;
-  overflow-x: auto;
   z-index: 5;
 }
   
@@ -161,15 +158,16 @@
 #footer {
   background-color: #ff7547;
   color: rgb(255, 255, 255);
-  display: flex;
 }
 
-.text-dark:hover{
- background-color: #ff7547;
+.foot-flex {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  display:flex;
+  justify-content: space-evenly;
 }
 
-.text-dark {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.foot-flex a {
+    color: rgb(255, 255, 255);
 }
     
 @media (min-width: 992px) {
