@@ -11,20 +11,20 @@ As creating this project we learned to utlize thrid-party api through Javascript
 
 ## Installation
 
-Open website through any web browser.
+Open website through any web browser. This website is built with HTML, CSS, JS, MD Bootstrap and jQuery.
 
 ## Usage
-<!-- add screenshots after each instruction -->
+
 1) To get different dog facts, utalize the drop down option to select different dog breed. Upon selection, the page will load dog facts of the newly selected dog breed.
 
 2) To search for different location, user would select from provided distance, type of location, search amount and the city. After clicking the search button, results of their search will be printed on the page and their city search will be save to local storage.
 Provide instructions and examples for use. Include screenshots as needed. When clicking the search history button, the search input vale will be changed to the previous search.
 
-<!-- To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+## Screenshot
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ``` -->
+![alt text](assets\image\screen-shots\Header.png?raw=true)
+![alt text](assets\image\screen-shots\DogFacts.png?raw=true)
+![alt text](assets\image\screen-shots\LocationSearchAndFooter.png?raw=true)
 
 ## Credits
 
@@ -37,8 +37,3 @@ Third-party Assets:
 OpenWeather: https://openweathermap.org/
 Geoapify: https://www.geoapify.com/
 The Dog API: https://thedogapi.com/
-
-<!-- ## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/). -->
-
