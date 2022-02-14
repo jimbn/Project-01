@@ -67,7 +67,6 @@ function getGeoApify () {
                         return response.json()
                     })
                     .then(function(data){
-                        console.log(data);
                         for(let i=0; i<data.features.length; i++){
 
                             let searchItem = document.createElement(`div`);
