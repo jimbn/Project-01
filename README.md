@@ -22,18 +22,28 @@ Provide instructions and examples for use. Include screenshots as needed. When c
 
 ## Screenshot
 
-![alt text](assets\image\screen-shots\Header.png?raw=true)
-![alt text](assets\image\screen-shots\DogFacts.png?raw=true)
-![alt text](assets\image\screen-shots\LocationSearchAndFooter.png?raw=true)
+![Header](assets\image\screen-shots\Header.png)
+
+![Dog-facts](assets\image\screen-shots\DogFacts.png)
+
+![Location-search-and-footer](assets\image\screen-shots\LocationSearchAndFooter.png)
+
 
 ## Credits
 
 Parakash, Vishaal - https://github.com/VishaalPrakash
+
 Ferris, David - https://github.com/dferris1135
+
 Nguyen, Tri - https://github.com/tringuyen128
+
 Nguyen, Jim - https://github.com/jimbn
 
+
 Third-party Assets:
+
 OpenWeather: https://openweathermap.org/
+
 Geoapify: https://www.geoapify.com/
+
 The Dog API: https://thedogapi.com/
