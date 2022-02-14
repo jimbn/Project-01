@@ -22,11 +22,11 @@ Provide instructions and examples for use. Include screenshots as needed. When c
 
 ## Screenshot
 
-![Header](assets\image\screen-shots\Header.png)
+![Header](assets/image/screen-shots/Header.png)
 
-![Dog-facts](assets\image\screen-shots\DogFacts.png)
+![Dog-facts](assets/image/screen-shots/DogFacts.png)
 
-![Location-search-and-footer](assets\image\screen-shots\LocationSearchAndFooter.png)
+![Location-search-and-footer](assets/image/screen-shots/LocationSearchAndFooter.png)
 
 
 ## Credits
