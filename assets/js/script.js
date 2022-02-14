@@ -90,8 +90,7 @@ function getGeoApify () {
                             searchItem.addEventListener(`mouseout`, function() {
                                 searchItem.className="";
                             })
-                        }
-                    document.getElementById(`itemsContainer`).className = `card shadow`;   
+                        } 
                 })
             }
             else {
