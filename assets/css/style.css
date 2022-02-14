@@ -4,8 +4,6 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
-
 .navbar .nav-link {
   color: rgb(0, 0, 0) !important;
 }
@@ -88,6 +86,7 @@
   
 #formPanel {
   padding: 10px;
+  margin-bottom: 20px;
 }
   
 #para {
@@ -97,13 +96,14 @@
 }
   
 #itemsContainer {
-    text-align: center;
-
+    display: flex;
+    justify-content: center;
 }
   
 .hover {
   background-color: #ff7547;
   box-shadow:5px 5px 5px  rgba(39, 17, 4, 0.6);
+  color: rgb(255, 255, 255);
   border-radius: 5px;
   z-index: 5;
 }
@@ -168,6 +168,7 @@
 
 .foot-flex a {
     color: rgb(255, 255, 255);
+    font-weight: 700;
 }
     
 @media (min-width: 992px) {
