@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <title>Human's Best Friend</title>
+  <title>Human's Best Friend</title>
     
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
   <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
   <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
   <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" />
   <!-- Font Awesome -->
-  <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-  rel="stylesheet"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <!-- Google Fonts -->
-  <link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
   <!-- MDB -->
-  <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
-  rel="stylesheet"
-  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body >
     <!--Navbar page name -->
   <header class = "hero" id="home">
@@ -51,7 +43,7 @@
   <!--Main layout-->
   <main class="main mt-5">
     <div class="container">
-      <!--Section: Content-->
+      <!--Section: Intro-->
       <section>
         <div class="row d-flex justify-content-center">
           <div class="col-md-6 col-sm-3 mb-5">
@@ -70,45 +62,70 @@
         </div>
         <hr class="my-2">
       </section>
-      <!-- search content-->
+      <!-- Section: Dog Facts-->
       <section>
-      <br>
-      <div class="row d-flex justify-content-center" id="dogs">
+        <br>
+        <div class="row d-flex justify-content-center" id="dogs">
           <p class="card h4 text-center col-md-6" id="para">
-            Curious about a breed? Check out our database on your favorite git pusdoggo.
-        </p>
-      </div>
-      <div class=" row d-flex justify-content-center">
-            <div class='card bg-info col-md-12 px-0 py-0 '>
-              <img class='breed-img' id='breed-img' src="" alt="breed-img">
-              <select class='breed-select text-center font-weight-bold' id="breed-select"></select>
-              <div class="caption text-center font-weight-bold">Breed-Height
-              </div>
-              <div class='breed-height text-center' id='breed-height' alt="breed-height">
-              </div>
-              <div class="caption text-center font-weight-bold">Breed-Weight
-              </div>
-              <div class='breed-weight text-center' id='breed-weight' alt="breed-weight">
-              </div>        
-              <div class="caption text-center font-weight-bold">Life Expentancy
-              </div>
-              <div class='lifespan text-center' id='lifespan' alt="lifespan">
-              </div> 
-              <div class="caption text-center font-weight-bold">Temperament
-              </div>
-              <div class='temperament text-center' id='temperament' alt="temperament">
-              </div>          
+            Curious about a breed? Check out our database on your favorite doggo.
+          </p>
+        </div>
+        <div class=" row d-flex justify-content-center">
+          <div class='card bg-info col-md-12 px-0 py-0 '>
+            <img class='breed-img' id='breed-img' src="" alt="breed-img">
+            <select class='breed-select text-center font-weight-bold' id="breed-select"></select>
+            <div class="caption text-center font-weight-bold"> 
+              Breed-Height 
             </div>
-      </div>
+            <div class='breed-height text-center' id='breed-height' alt="breed-height">
+            </div>
+            <div class="caption text-center font-weight-bold">
+              Breed-Weight               
+            </div>
+            <div class='breed-weight text-center' id='breed-weight' alt="breed-weight">
+            </div>        
+            <div class="caption text-center font-weight-bold">
+              Life Expentancy
+            </div>
+            <div class='lifespan text-center' id='lifespan' alt="lifespan">
+            </div> 
+            <div class="caption text-center font-weight-bold">
+              Temperament
+            </div>
+            <div class='temperament text-center' id='temperament' alt="temperament">
+            </div>          
+          </div>
+        </div>
+      </section>    
       <br>
-      <div class="row d-flex justify-content-center" id="search">
-        <p class="card h4 text-center col-md-6" id="para">
-          Search
-      </p>
-      </div>
-      <div class="row d-flex justify-content-center">
-        <div id="formPanel" class="bg-info card ">
-          <div id="searchDistanceContainer">
+        <!--Section: Search locations  -->
+      <section>
+        <div class="row d-flex justify-content-center" id="search">
+          <p class="card h4 text-center col-md-6" id="para">
+            Looking for places to care, pamper and/or play with your doggo?
+        </p>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div id="formPanel" class="bg-info card ">
+            <div class="" id="searchParameterContainer">
+              <div class="">
+                  <input type="radio" id="para1" name="para" value="pet.shop">
+                  <label for="para1">Pet Store</label>
+              </div>
+              <div class="">
+                  <input type="radio" id="para2" name="para" value="pet.veterinary">
+                  <label for="para2">Veterinary Clinic</label>
+              </div>
+              <div class="">
+                  <input type="radio" id="para3" name="para" value="pet.service">
+                  <label for="para3">Pet Services</label>
+              </div>
+              <div class="">
+                  <input type="radio" id="para4" name="para" value="pet.dog_park">
+                  <label for="para4">Dog Park</label>
+              </div>
+            </div>
+            <div id="searchDistanceContainer">
               <label for="searchDist">Distance:</label>
               <select class="text-center" id="searchDist" name="searchDist">
                   <option value="1609">1 mile</option>
@@ -116,50 +133,31 @@
                   <option value="24140">15 miles</option>
                   <option value="40233.6">25 miles</option>
               </select>
+            </div>
+            <div id="searchNumbContainer text-center">
+              <label for="searchNumb">Number of Search Results:</label>
+              <select id="searchNumb" name="searchNumb">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+              </select>
+            </div>
+            <input type="text" name="searchedCity" id="searchedCity" placeholder="City Name">
+            <button id ="fetchButton" >Search</button>
+            <button id="clear">Clear Search</button>
+            <button id="fetchHist">Most Recent City Input</button>
           </div>
-          <div class="" id="searchParameterContainer">
-            <div class="">
-                <input type="radio" id="para1" name="para" value="pet.shop">
-                <label for="para1">Pet Store</label>
+          <div id="itemsContainer text-center" class="">
+            <div id="listItems">
             </div>
-            <div class="">
-                <input type="radio" id="para2" name="para" value="pet.veterinary">
-                <label for="para2">Veterinary Clinic</label>
-            </div>
-            <div class="">
-                <input type="radio" id="para3" name="para" value="pet.service">
-                <label for="para3">Pet Services</label>
-            </div>
-            <div class="">
-                <input type="radio" id="para4" name="para" value="pet.dog_park">
-                <label for="para4">Dog Park</label>
-            </div>
-          </div>
-          <div id="searchNumbContainer text-center">
-            <label for="searchNumb">Number of Search Results:</label>
-            <select id="searchNumb" name="searchNumb">
-              <option value="5">5</option>
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="20">20</option>
-            </select>
-          </div>
-          <input type="text" name="searchedCity" id="searchedCity" placeholder="City Name">
-          <button id ="fetchButton" >Click for list</button>
-          <button id="clear">Clear Results</button>
-        </div>
-        <div id="itemsContainer text-center">
-          <div id="listItems">
           </div>
         </div>
-
-      </div>
-
-    </div>
+      </section>
     </div>
   </main>
-<!-- Modal  -->
 
+<!-- Modal Begins -->
   <div id="locError" class="modalHide">
     <div class="shadow mMessage">
       <p>Unable to locate city and/or no locations of specified criteria has been found.</p>
@@ -173,13 +171,28 @@
       <button id="closeModalPara">Close</button>
     </div>
   </div>
+<!-- Modal Ends -->
 
+<!-- Footer Begins -->
+<br>
+ <footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3"  id="footer">
+    <h5> <strong>Contributors:</strong></h5>
+      <a class="text-dark" href="https://github.com/tringuyen128">Tri Nguyen</a> <br>
+      <a class="text-dark" href="https://github.com/jimbn">Jim Nguyen</a> <br>
+      <a class="text-dark" href="https://github.com/VishaalPrakash">Vishaal Prakash</a> <br>
+      <a class="text-dark" href="https://github.com/dferris1135">David Ferris</a> <br>
+    </div>
+  </footer> 
+<!-- Footer Ends -->
+
+<!-- Script Begins -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous">
     </script>
-
     <script src="assets/js/script.js"></script>
     <script src='assets/js/dogapi.js'></script>
+<!-- Script Ends -->
 </body>
 </html>

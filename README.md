@@ -28,7 +28,7 @@ Provide instructions and examples for use. Include screenshots as needed. When c
 
 ## Credits
 
-Parakash, Vishall - https://github.com/VishaalPrakash
+Parakash, Vishaal - https://github.com/VishaalPrakash
 Ferris, David - https://github.com/dferris1135
 Nguyen, Tri - https://github.com/tringuyen128
 Nguyen, Jim - https://github.com/jimbn
